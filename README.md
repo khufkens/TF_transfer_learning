@@ -22,7 +22,7 @@ In addition you will need a CSV file specifying:
 | /my/location/2.jpg, |    dog   |
 | ..., |    ...   |
 
-Other information in this file will be ignored.
+Other columns in this file will be ignored. Rows with NA as a label will be removed from the training / validation dataset.
 
 ### retraining image labels
 
@@ -43,7 +43,7 @@ python ../python/retrain_image_list.py \
 
 ### classifying images
 
-Similar to the retraining code an **image_list** parameter was added to the original label.py script. This list only requires a **files** column which specifies the location of images you want to see classified.
+Similar to the retraining code an **image_list** parameter was added to the original label.py script. This list only requires a **files** column which specifies the location of images you want to see classified, all other columns are ignored.
 
 ```bash
 # classify data
